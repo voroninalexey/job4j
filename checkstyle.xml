@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 
-<!DOCTYPE modules PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.3//EN"
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.3//EN"
         "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
 
 
 
-<modules>
+<module name="Check">
     <!--Расширение файла должно быть java, properties, xml-->
     <!--suppress ALL -->
     <property name="fileExtensions" value="java, properties, xml"/>
@@ -96,4 +96,4 @@
 
     </module>
 
-</modules>
+</module>
