@@ -1,5 +1,4 @@
 package ru.job4j.condition;
-
 /**  Программа вычисления расстояния между двумя точками в системе координат (x,y).
  *@author alexvoronin
  *@since 05.04.2019
