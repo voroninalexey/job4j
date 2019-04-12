@@ -52,9 +52,9 @@ package ru.job4j.condition;
        * @param a Длина от точки a b.
        * @param b Длина от точки a c.
        * @param c Длина от точки b c.
-       * @return true если все стороны отличны от нуля
+       * @return Любая сторона треугольника меньше суммы двух других сторон
        */
       private boolean exist(double a, double b, double c) {
-          return a * b * c != 0;
-                }
+          return a + b > c && a + c > b && b + c > a;
+      }
       }
