@@ -23,7 +23,7 @@ package ru.job4j.condition;
       }
 
       /**
-       * Метод должен вычислить прощадь треугольканива.
+       * Метод должен вычислить прощадь треугольника.
        *
        * Формула.
        *
@@ -39,7 +39,8 @@ package ru.job4j.condition;
           double b = new Point().distance(x2, y2, x3, y3);
           double c = new Point().distance(x1, y1, x3, y3);
           double p = period(a, b, c);
-          if (this.exist(a, b, c)) {
+
+          if (this.exist(x1, x2, x3, y1, y2, y3)) {
               // написать формулу для расчета площади треугольника.
               rsl = Math.sqrt(p * (p - a) * (p - b) * (p - c));
           }
@@ -47,14 +48,22 @@ package ru.job4j.condition;
       }
 
       /**
-       * Метод проверяет можно ли построить треугольник с такими длинами сторон.
+       * Метод проверяет коллинеарность сторон треугольника
        *
-       * @param a Длина от точки a b.
-       * @param b Длина от точки a c.
-       * @param c Длина от точки b c.
-       * @return Любая сторона треугольника меньше суммы двух других сторон
+       * @param x1 координаты
+       * @param x2 координаты
+       * @param x3 координаты
+       * @param y1 координаты
+       * @param y2 координаты
+       * @param y3 координаты
+       * @return  можно ли построить треугольник
        */
-      private boolean exist(double a, double b, double c) {
-          return a + b > c && a + c > b && b + c > a;
+
+      private boolean exist(double x1, double x2, double x3, double y1, double y2, double y3) {
+
+          return x1 / x2 != y1 / y2 & x2 / x3 != y2 / y3 & x1 / x3 != y1 / y3;
+
+
       }
+
       }

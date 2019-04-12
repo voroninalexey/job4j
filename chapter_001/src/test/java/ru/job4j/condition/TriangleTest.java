@@ -24,4 +24,18 @@ public class TriangleTest {
         //Проверяем результат и ожидаемое значение.
         assertThat(result, closeTo(expected, 0.1));
     }
+    /**
+     * тест все точки на одной прямой
+     */
+    @Test
+    public void whenPointToStraight() {
+        // Создаем объект треугольник.
+        Triangle triangle = new Triangle();
+        // Вычисляем площадь.
+        double result = triangle.area(0, 0, 2, 2, 4, 4);
+        // Задаем ожидаемый результат.
+        double expected = -1;
+        //Проверяем результат и ожидаемое значение.
+        assertThat(result, closeTo(expected, 0.1));
+    }
 }
